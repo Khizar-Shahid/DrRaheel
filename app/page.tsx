@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
+import { openWhatsApp } from "@/lib/whatsapp"
 import {
   Phone,
   MapPin,
@@ -195,7 +196,10 @@ export default function RaheelDentalSurgery() {
                 <p className="text-sm font-bold text-[#2c5aa0]">+92-339-0097397</p>
                 <p className="text-xs text-gray-600">Emergency Available 24/7</p>
               </div>
-              <Button className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Button 
+                onClick={openWhatsApp}
+                className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
                 <Calendar className="h-4 w-4 mr-2" />
                 Book Appointment
               </Button>
@@ -234,7 +238,10 @@ export default function RaheelDentalSurgery() {
                 </Link>
                 <div className="pt-4 border-t">
                   <p className="font-bold text-[#2c5aa0] mb-2">+92-339-0097397</p>
-                  <Button className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white">
+                  <Button 
+                    onClick={openWhatsApp}
+                    className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white"
+                  >
                     Book Appointment
                   </Button>
                 </div>
@@ -277,19 +284,12 @@ export default function RaheelDentalSurgery() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
+                  onClick={openWhatsApp}
                   size="lg"
                   className="bg-white text-[#2c5aa0] hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold"
                 >
                   <Calendar className="h-5 w-5 mr-2" />
                   Book Your Consultation Today
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#2c5aa0] bg-transparent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
-                >
-                  <MessageCircle className="h-5 w-5 mr-2" />
-                  Virtual Consultation Available
                 </Button>
               </div>
 
@@ -321,7 +321,7 @@ export default function RaheelDentalSurgery() {
                   ⭐ Top Rated
                 </div>
                 <Image
-                  src="/images/dr-raheel.jpg"
+                  src="/images/11_enhanced.jpg"
                   alt="Dr. Raheel Ahmad Khan - Leading Dentist in Islamabad"
                   width={500}
                   height={600}
@@ -446,7 +446,10 @@ export default function RaheelDentalSurgery() {
                 ))}
               </div>
 
-              <Button className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Button 
+                onClick={openWhatsApp}
+                className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
                 <Calendar className="h-4 w-4 mr-2" />
                 Schedule Consultation
               </Button>
@@ -458,7 +461,7 @@ export default function RaheelDentalSurgery() {
                   🏆 Award Winning
                 </div>
                 <Image
-                  src="/images/dr-raheel.jpg"
+                  src="/images/11_enhanced.jpg"
                   alt="Dr. Raheel Ahmad Khan in his clinic"
                   width={500}
                   height={600}
@@ -588,7 +591,10 @@ export default function RaheelDentalSurgery() {
                       placeholder="Tell us about your concerns or preferred treatment"
                       className="border-2 border-gray-200 focus:border-[#2c5aa0] rounded-xl min-h-[120px]"
                     />
-                    <Button className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold text-lg">
+                    <Button 
+                      onClick={openWhatsApp}
+                      className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold text-lg"
+                    >
                       <Calendar className="h-5 w-5 mr-2" />
                       Book Appointment
                     </Button>
@@ -617,16 +623,12 @@ export default function RaheelDentalSurgery() {
                     ))}
                   </div>
                   <div className="mt-8 space-y-4">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold">
+                    <Button 
+                      onClick={openWhatsApp}
+                      className="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
+                    >
                       <MessageCircle className="h-5 w-5 mr-2" />
                       Chat on WhatsApp
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full border-2 border-[#2c5aa0] text-[#2c5aa0] hover:bg-[#2c5aa0] hover:text-white bg-transparent py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
-                    >
-                      <Phone className="h-5 w-5 mr-2" />
-                      Call Now: +92-339-0097397
                     </Button>
                   </div>
                 </div>
