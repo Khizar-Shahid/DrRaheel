@@ -65,7 +65,7 @@ export default function RaheelDentalSurgery() {
       gradient: "from-orange-500 to-red-500",
     },
     {
-      title: "Botox & Fillers",
+      title: "Aesthetic Treatments",
       description: "Non-surgical facial rejuvenation treatments for youthful appearance",
       icon: <Heart className="h-8 w-8" />,
       popular: true,
@@ -98,7 +98,7 @@ export default function RaheelDentalSurgery() {
     {
       name: "Fatima Khan",
       rating: 5,
-      text: "Amazing experience with Botox treatment. Dr. Raheel is very skilled and the results are fantastic! The clinic is modern and hygienic.",
+      text: "Amazing experience with aesthetic treatment. Dr. Raheel is very skilled and the results are fantastic! The clinic is modern and hygienic.",
       treatment: "Aesthetic Treatment",
       avatar: "FK",
     },
@@ -675,7 +675,7 @@ export default function RaheelDentalSurgery() {
             <div>
               <h4 className="text-lg font-bold mb-6 text-white">Services</h4>
               <ul className="space-y-3 text-gray-400">
-                {["General Dentistry", "Cosmetic Dentistry", "Orthodontics", "Dental Implants", "Botox & Fillers"].map(
+                {["General Dentistry", "Cosmetic Dentistry", "Orthodontics", "Dental Implants", "Aesthetic Treatments"].map(
                   (service, index) => (
                     <li key={index} className="hover:text-white transition-colors duration-300">
                       {service}
