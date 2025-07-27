@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { openWhatsApp } from "@/lib/whatsapp"
+import { openPhoneDialer } from "@/lib/whatsapp"
 import {
   Phone,
   MapPin,
@@ -193,11 +193,16 @@ export default function RaheelDentalSurgery() {
 
             <div className="hidden md:flex items-center space-x-4">
               <div className="text-right">
-                <p className="text-sm font-bold text-[#2c5aa0]">+92-339-0097397</p>
+                <button 
+                  onClick={openPhoneDialer}
+                  className="text-sm font-bold text-[#2c5aa0] hover:text-[#1e3f73] transition-colors duration-300 cursor-pointer"
+                >
+                  +92-339-0097397
+                </button>
                 <p className="text-xs text-gray-600">Emergency Available 24/7</p>
               </div>
               <Button 
-                onClick={openWhatsApp}
+                onClick={openPhoneDialer}
                 className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Calendar className="h-4 w-4 mr-2" />
@@ -237,9 +242,14 @@ export default function RaheelDentalSurgery() {
                   Contact
                 </Link>
                 <div className="pt-4 border-t">
-                  <p className="font-bold text-[#2c5aa0] mb-2">+92-339-0097397</p>
+                  <button 
+                    onClick={openPhoneDialer}
+                    className="font-bold text-[#2c5aa0] mb-2 hover:text-[#1e3f73] transition-colors duration-300 cursor-pointer"
+                  >
+                    +92-339-0097397
+                  </button>
                   <Button 
-                    onClick={openWhatsApp}
+                    onClick={openPhoneDialer}
                     className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white"
                   >
                     Book Appointment
@@ -284,7 +294,7 @@ export default function RaheelDentalSurgery() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  onClick={openWhatsApp}
+                  onClick={openPhoneDialer}
                   size="lg"
                   className="bg-white text-[#2c5aa0] hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold"
                 >
@@ -447,7 +457,7 @@ export default function RaheelDentalSurgery() {
               </div>
 
               <Button 
-                onClick={openWhatsApp}
+                onClick={openPhoneDialer}
                 className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Calendar className="h-4 w-4 mr-2" />
@@ -592,7 +602,7 @@ export default function RaheelDentalSurgery() {
                       className="border-2 border-gray-200 focus:border-[#2c5aa0] rounded-xl min-h-[120px]"
                     />
                     <Button 
-                      onClick={openWhatsApp}
+                      onClick={openPhoneDialer}
                       className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold text-lg"
                     >
                       <Calendar className="h-5 w-5 mr-2" />
@@ -604,7 +614,7 @@ export default function RaheelDentalSurgery() {
                   <h3 className="text-2xl font-bold mb-8 text-[#2c5aa0]">Contact Information</h3>
                   <div className="space-y-6">
                     {[
-                      { icon: <Phone className="h-6 w-6" />, title: "Phone & WhatsApp", info: "+92-339-0097397" },
+                      { icon: <Phone className="h-6 w-6" />, title: "Phone", info: "+92-339-0097397" },
                       { icon: <Mail className="h-6 w-6" />, title: "Email", info: "info@raheeldentalcare.com" },
                       {
                         icon: <MapPin className="h-6 w-6" />,
@@ -617,18 +627,27 @@ export default function RaheelDentalSurgery() {
                         <div className="text-[#2c5aa0] mr-4 mt-1">{contact.icon}</div>
                         <div>
                           <p className="font-bold text-gray-900">{contact.title}</p>
-                          <p className="text-gray-600">{contact.info}</p>
+                          {contact.title === "Phone" ? (
+                            <button 
+                              onClick={openPhoneDialer}
+                              className="text-gray-600 hover:text-[#2c5aa0] transition-colors duration-300 cursor-pointer"
+                            >
+                              {contact.info}
+                            </button>
+                          ) : (
+                            <p className="text-gray-600">{contact.info}</p>
+                          )}
                         </div>
                       </div>
                     ))}
                   </div>
                   <div className="mt-8 space-y-4">
                     <Button 
-                      onClick={openWhatsApp}
+                      onClick={openPhoneDialer}
                       className="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
                     >
-                      <MessageCircle className="h-5 w-5 mr-2" />
-                      Chat on WhatsApp
+                      <Phone className="h-5 w-5 mr-2" />
+                      Call Now
                     </Button>
                   </div>
                 </div>
@@ -691,10 +710,13 @@ export default function RaheelDentalSurgery() {
                   <MapPin className="h-5 w-5 mr-2 mt-0.5 text-[#2c5aa0]" />
                   Shop #23, G-9 Markaz, Islamabad
                 </p>
-                <p className="flex items-center">
+                <button 
+                  onClick={openPhoneDialer}
+                  className="flex items-center hover:text-white transition-colors duration-300 cursor-pointer"
+                >
                   <Phone className="h-5 w-5 mr-2 text-[#2c5aa0]" />
                   +92-339-0097397
-                </p>
+                </button>
                 <p className="flex items-center">
                   <Mail className="h-5 w-5 mr-2 text-[#2c5aa0]" />
                   info@raheeldentalcare.com
