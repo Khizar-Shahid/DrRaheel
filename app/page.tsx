@@ -144,18 +144,18 @@ export default function RaheelDentalSurgery() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-md shadow-lg border-b sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-[#2c5aa0] to-[#1e3f73] p-3 rounded-xl shadow-lg">
-                <Stethoscope className="h-6 w-6 text-white" />
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <div className="bg-gradient-to-br from-[#2c5aa0] to-[#1e3f73] p-2 sm:p-3 rounded-xl shadow-lg">
+                <Stethoscope className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Raheel Dental Surgery</h1>
-                <p className="text-sm text-gray-600 font-medium">Dr. Raheel Ahmad Khan</p>
+                <h1 className="text-lg sm:text-xl font-bold text-gray-900">Raheel Dental Surgery</h1>
+                <p className="text-xs sm:text-sm text-gray-600 font-medium">Dr. Raheel Ahmad Khan</p>
               </div>
             </div>
 
@@ -206,14 +206,17 @@ export default function RaheelDentalSurgery() {
                 className="bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Calendar className="h-4 w-4 mr-2" />
-                Book Appointment
+                <span className="hidden lg:inline">Book Appointment</span>
+                <span className="lg:hidden">Book</span>
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#2c5aa0] focus:ring-offset-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -241,17 +244,19 @@ export default function RaheelDentalSurgery() {
                 >
                   Contact
                 </Link>
-                <div className="pt-4 border-t">
+                <div className="pt-4 border-t space-y-3">
                   <button 
                     onClick={openPhoneDialer}
-                    className="font-bold text-[#2c5aa0] mb-2 hover:text-[#1e3f73] transition-colors duration-300 cursor-pointer"
+                    className="font-bold text-[#2c5aa0] hover:text-[#1e3f73] transition-colors duration-300 cursor-pointer block w-full text-left"
                   >
                     +92-339-0097397
                   </button>
+                  <p className="text-xs text-gray-600">Emergency Available 24/7</p>
                   <Button 
                     onClick={openPhoneDialer}
                     className="w-full bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] hover:from-[#1e3f73] hover:to-[#2c5aa0] text-white"
                   >
+                    <Calendar className="h-4 w-4 mr-2" />
                     Book Appointment
                   </Button>
                 </div>
@@ -273,13 +278,13 @@ export default function RaheelDentalSurgery() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
               <div className="space-y-4">
                 <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-sm font-medium">
                   ✨ 12+ Years of Excellence
                 </Badge>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   Transform Your Smile with
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                     {" "}
@@ -287,23 +292,24 @@ export default function RaheelDentalSurgery() {
                   </span>{" "}
                   Dental Expert
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 font-light">
+                <p className="text-lg sm:text-xl md:text-2xl text-blue-100 font-light">
                   Dr. Raheel Ahmad Khan - Advanced Dentistry & Aesthetic Medicine Specialist
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  onClick={openPhoneDialer}
-                  size="lg"
-                  className="bg-white text-[#2c5aa0] hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold"
-                >
+                              <Button
+                onClick={openPhoneDialer}
+                size="lg"
+                className="bg-white text-[#2c5aa0] hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold min-h-[48px] touch-manipulation"
+              >
                   <Calendar className="h-5 w-5 mr-2" />
-                  Book Your Consultation Today
+                  <span className="hidden sm:inline">Book Your Consultation Today</span>
+                  <span className="sm:hidden">Book Consultation</span>
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 gap-6 pt-4">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4">
                 <div className="flex items-center space-x-3">
                   <div className="bg-white/20 p-2 rounded-lg">
                     <Users className="h-6 w-6 text-white" />
@@ -325,9 +331,9 @@ export default function RaheelDentalSurgery() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+            <div className="relative order-first lg:order-last">
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl">
+                <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
                   ⭐ Top Rated
                 </div>
                 <Image
@@ -335,7 +341,7 @@ export default function RaheelDentalSurgery() {
                   alt="Dr. Raheel Ahmad Khan - Leading Dentist in Islamabad"
                   width={500}
                   height={600}
-                  className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 w-full h-auto"
                   priority
                 />
               </div>
@@ -345,9 +351,9 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               { number: "12+", label: "Years Experience", icon: <Award className="h-8 w-8" /> },
               { number: "8,000+", label: "Happy Patients", icon: <Users className="h-8 w-8" /> },
@@ -355,10 +361,10 @@ export default function RaheelDentalSurgery() {
               { number: "100%", label: "Satisfaction Rate", icon: <Heart className="h-8 w-8" /> },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <div className="text-[#2c5aa0] mb-3 flex justify-center">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-[#2c5aa0] mb-2">{stat.number}</div>
-                  <p className="text-gray-600 font-medium">{stat.label}</p>
+                <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <div className="text-[#2c5aa0] mb-2 sm:mb-3 flex justify-center">{stat.icon}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#2c5aa0] mb-1 sm:mb-2">{stat.number}</div>
+                  <p className="text-sm sm:text-base text-gray-600 font-medium">{stat.label}</p>
                 </div>
               </div>
             ))}
@@ -367,20 +373,20 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-white">
+      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <Badge className="bg-[#2c5aa0]/10 text-[#2c5aa0] px-4 py-2 mb-4">Our Services</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Comprehensive Dental & Aesthetic Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               From routine dental care to advanced aesthetic treatments, we offer complete solutions for your oral
               health and beauty needs with cutting-edge technology.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -425,13 +431,13 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* About Dr. Raheel Section */}
-      <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="about" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div>
                 <Badge className="bg-[#2c5aa0]/10 text-[#2c5aa0] px-4 py-2 mb-4">Meet Your Doctor</Badge>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Dr. Raheel Ahmad Khan</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Dr. Raheel Ahmad Khan</h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   With over 12 years of experience in dentistry and aesthetic medicine, Dr. Raheel Ahmad Khan is one of
                   Islamabad's most trusted dental professionals. He combines advanced techniques with a gentle,
@@ -465,9 +471,9 @@ export default function RaheelDentalSurgery() {
               </Button>
             </div>
 
-            <div className="relative">
-              <div className="relative bg-gradient-to-br from-[#2c5aa0]/10 to-blue-100 rounded-3xl p-8 shadow-xl">
-                <div className="absolute -top-6 -left-6 bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
+            <div className="relative order-first lg:order-last">
+              <div className="relative bg-gradient-to-br from-[#2c5aa0]/10 to-blue-100 rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl">
+                <div className="absolute -top-3 -left-3 sm:-top-6 sm:-left-6 bg-gradient-to-r from-[#2c5aa0] to-[#1e3f73] text-white px-3 py-1 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-bold shadow-lg">
                   🏆 Award Winning
                 </div>
                 <Image
@@ -475,7 +481,7 @@ export default function RaheelDentalSurgery() {
                   alt="Dr. Raheel Ahmad Khan in his clinic"
                   width={500}
                   height={600}
-                  className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 w-full h-auto"
                 />
               </div>
             </div>
@@ -484,29 +490,29 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <Badge className="bg-[#2c5aa0]/10 text-[#2c5aa0] px-4 py-2 mb-4">Why Choose Us</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Choose Raheel Dental Surgery?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Why Choose Raheel Dental Surgery?</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Experience world-class dental care with state-of-the-art technology and personalized treatment plans.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">
                   <div
-                    className={`${feature.color} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`${feature.color} w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-[#2c5aa0] transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 text-center group-hover:text-[#2c5aa0] transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">{feature.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -515,15 +521,15 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <Badge className="bg-[#2c5aa0]/10 text-[#2c5aa0] px-4 py-2 mb-4">Patient Reviews</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What Our Patients Say</h2>
-            <p className="text-xl text-gray-600">Real experiences from our satisfied patients</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">What Our Patients Say</h2>
+            <p className="text-lg sm:text-xl text-gray-600">Real experiences from our satisfied patients</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
@@ -553,7 +559,7 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* Appointment Booking */}
-      <section className="py-24 bg-gradient-to-br from-[#2c5aa0] via-[#1e3f73] to-[#0f1f3d] text-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-[#2c5aa0] via-[#1e3f73] to-[#0f1f3d] text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
@@ -561,20 +567,20 @@ export default function RaheelDentalSurgery() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Smile?</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Ready to Transform Your Smile?</h2>
+            <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto px-4">
               Book your consultation today and take the first step towards a healthier, more beautiful smile.
             </p>
           </div>
 
           <Card className="bg-white/95 backdrop-blur-md text-gray-900 shadow-2xl border-0">
-            <CardContent className="p-10">
-              <div className="grid md:grid-cols-2 gap-12">
+            <CardContent className="p-6 sm:p-8 lg:p-10">
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                 <div>
-                  <h3 className="text-2xl font-bold mb-8 text-[#2c5aa0]">Book Your Appointment</h3>
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-[#2c5aa0]">Book Your Appointment</h3>
+                  <form className="space-y-4 sm:space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <Input
                         placeholder="First Name"
                         className="border-2 border-gray-200 focus:border-[#2c5aa0] rounded-xl"
@@ -611,8 +617,8 @@ export default function RaheelDentalSurgery() {
                   </form>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-8 text-[#2c5aa0]">Contact Information</h3>
-                  <div className="space-y-6">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-[#2c5aa0]">Contact Information</h3>
+                  <div className="space-y-4 sm:space-y-6">
                     {[
                       { icon: <Phone className="h-6 w-6" />, title: "Phone", info: "+92-339-0097397" },
                       { icon: <Mail className="h-6 w-6" />, title: "Email", info: "info@raheeldentalcare.com" },
@@ -658,17 +664,17 @@ export default function RaheelDentalSurgery() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="bg-gradient-to-br from-[#2c5aa0] to-[#1e3f73] p-3 rounded-xl shadow-lg">
-                  <Stethoscope className="h-6 w-6 text-white" />
+                <div className="bg-gradient-to-br from-[#2c5aa0] to-[#1e3f73] p-2 sm:p-3 rounded-xl shadow-lg">
+                  <Stethoscope className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Raheel Dental Surgery</h3>
-                  <p className="text-gray-400">Dr. Raheel Ahmad Khan</p>
+                  <h3 className="text-lg sm:text-xl font-bold">Raheel Dental Surgery</h3>
+                  <p className="text-sm sm:text-base text-gray-400">Dr. Raheel Ahmad Khan</p>
                 </div>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
