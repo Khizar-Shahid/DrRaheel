@@ -417,6 +417,7 @@ export default function RaheelDentalSurgery() {
                     {service.description}
                   </CardDescription>
                   <Button
+                    onClick={openPhoneDialer}
                     variant="outline"
                     className="w-full border-2 border-[#2c5aa0] text-[#2c5aa0] hover:bg-[#2c5aa0] hover:text-white bg-transparent transition-all duration-300 font-semibold group-hover:shadow-lg"
                   >
