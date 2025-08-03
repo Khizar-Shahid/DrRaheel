@@ -3,13 +3,13 @@ import './globals.css'
 import GoogleTagManager from '@/components/GoogleTagManager'
 
 export const metadata: Metadata = {
-  title: 'Raheel Dental Surgery - Dr. Raheel Ahmad Khan | Islamabad',
-  description: 'Leading dental surgery in Islamabad. Dr. Raheel Ahmad Khan offers comprehensive dental care, cosmetic dentistry, orthodontics, and aesthetic treatments with state-of-the-art technology.',
+  title: 'Raheel Dental Surgery - Dr. Raheel Ahmad | Islamabad',
+  description: 'Leading dental surgery in Islamabad. Dr. Raheel Ahmad offers comprehensive dental care, cosmetic dentistry, orthodontics, and aesthetic treatments with state-of-the-art technology.',
   generator: 'v0.dev',
-  keywords: 'dental surgery, dentist, Islamabad, Dr. Raheel Ahmad Khan, cosmetic dentistry, orthodontics, dental implants',
-  authors: [{ name: 'Dr. Raheel Ahmad Khan' }],
+  keywords: 'dental surgery, dentist, Islamabad, Dr. Raheel Ahmad, cosmetic dentistry, orthodontics, dental implants',
+  authors: [{ name: 'Dr. Raheel Ahmad' }],
   openGraph: {
-    title: 'Raheel Dental Surgery - Dr. Raheel Ahmad Khan',
+    title: 'Raheel Dental Surgery - Dr. Raheel Ahmad',
     description: 'Leading dental surgery in Islamabad. Comprehensive dental care and aesthetic treatments.',
     type: 'website',
     locale: 'en_US',

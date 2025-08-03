@@ -155,7 +155,7 @@ export default function RaheelDentalSurgery() {
               </div>
               <div>
                 <h1 className="text-lg sm:text-xl font-bold text-gray-900">Raheel Dental Surgery</h1>
-                <p className="text-xs sm:text-sm text-gray-600 font-medium">Dr. Raheel Ahmad Khan</p>
+                <p className="text-xs sm:text-sm text-gray-600 font-medium">Dr. Raheel Ahmad</p>
               </div>
             </div>
 
@@ -293,16 +293,16 @@ export default function RaheelDentalSurgery() {
                   Dental Expert
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-blue-100 font-light">
-                  Dr. Raheel Ahmad Khan - Advanced Dentistry & Aesthetic Medicine Specialist
+                  Dr. Raheel Ahmad - Advanced Dentistry & Aesthetic Medicine Specialist
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                              <Button
+                <Button
                 onClick={openPhoneDialer}
-                size="lg"
+                  size="lg"
                 className="bg-white text-[#2c5aa0] hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold min-h-[48px] touch-manipulation"
-              >
+                >
                   <Calendar className="h-5 w-5 mr-2" />
                   <span className="hidden sm:inline">Book Your Consultation Today</span>
                   <span className="sm:hidden">Book Consultation</span>
@@ -338,7 +338,7 @@ export default function RaheelDentalSurgery() {
                 </div>
                 <Image
                   src="/images/11_enhanced.jpg"
-                  alt="Dr. Raheel Ahmad Khan - Leading Dentist in Islamabad"
+                  alt="Dr. Raheel Ahmad - Leading Dentist in Islamabad"
                   width={500}
                   height={600}
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 w-full h-auto"
@@ -438,9 +438,9 @@ export default function RaheelDentalSurgery() {
             <div className="space-y-6 sm:space-y-8">
               <div>
                 <Badge className="bg-[#2c5aa0]/10 text-[#2c5aa0] px-4 py-2 mb-4">Meet Your Doctor</Badge>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Dr. Raheel Ahmad Khan</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Dr. Raheel Ahmad</h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  With over 12 years of experience in dentistry and aesthetic medicine, Dr. Raheel Ahmad Khan is one of
+                  With over 12 years of experience in dentistry and aesthetic medicine, Dr. Raheel Ahmad is one of
                   Islamabad's most trusted dental professionals. He combines advanced techniques with a gentle,
                   patient-centered approach to deliver exceptional results.
                 </p>
@@ -448,7 +448,7 @@ export default function RaheelDentalSurgery() {
 
               <div className="grid grid-cols-1 gap-4">
                 {[
-                  "BDS from University of Health Sciences Lahore",
+                  "BDS from University of Karachi",
                   "MSPH, C.Ortho, C.Implant, C.Aesthetic Certified",
                   "Member of Pakistan Dental Association",
                   "Fluent in English, Urdu, and Punjabi",
@@ -479,7 +479,7 @@ export default function RaheelDentalSurgery() {
                 </div>
                 <Image
                   src="/images/11_enhanced.jpg"
-                  alt="Dr. Raheel Ahmad Khan in his clinic"
+                  alt="Dr. Raheel Ahmad in his clinic"
                   width={500}
                   height={600}
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 w-full h-auto"
@@ -626,9 +626,9 @@ export default function RaheelDentalSurgery() {
                       {
                         icon: <MapPin className="h-6 w-6" />,
                         title: "Location",
-                        info: "Shop #23, G-9 Markaz, Islamabad",
+                        info: "1st floor Laraib Centre G9 Markaz Karachi Company Islamabad",
                       },
-                      { icon: <Clock className="h-6 w-6" />, title: "Hours", info: "Mon-Sat: 9AM-8PM" },
+                                              { icon: <Clock className="h-6 w-6" />, title: "Hours", info: "Mon-Sat: 10:00 AM to 9:00 PM" },
                     ].map((contact, index) => (
                       <div key={index} className="flex items-start bg-gray-50 p-4 rounded-xl">
                         <div className="text-[#2c5aa0] mr-4 mt-1">{contact.icon}</div>
@@ -642,7 +642,7 @@ export default function RaheelDentalSurgery() {
                               {contact.info}
                             </button>
                           ) : (
-                            <p className="text-gray-600">{contact.info}</p>
+                          <p className="text-gray-600">{contact.info}</p>
                           )}
                         </div>
                       </div>
@@ -675,7 +675,7 @@ export default function RaheelDentalSurgery() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold">Raheel Dental Surgery</h3>
-                  <p className="text-sm sm:text-base text-gray-400">Dr. Raheel Ahmad Khan</p>
+                  <p className="text-sm sm:text-base text-gray-400">Dr. Raheel Ahmad</p>
                 </div>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -715,7 +715,7 @@ export default function RaheelDentalSurgery() {
               <div className="space-y-4 text-gray-400">
                 <p className="flex items-start">
                   <MapPin className="h-5 w-5 mr-2 mt-0.5 text-[#2c5aa0]" />
-                  Shop #23, G-9 Markaz, Islamabad
+                  1st floor Laraib Centre G9 Markaz Karachi Company Islamabad
                 </p>
                 <button 
                   onClick={openPhoneDialer}
